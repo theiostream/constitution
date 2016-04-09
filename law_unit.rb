@@ -10,12 +10,8 @@ class LawUnit
 
 	def initialize(base)
 		@base = base
-		
 		@children = Array.new
-		list_children
-
 		@amendments = Array.new
-		@text = make_text
 	end
 
 	def add_amendment(amendment)
@@ -23,10 +19,10 @@ class LawUnit
 	end
 
 	def list_children()
-		nil
+		@children = Array.new
 	end
 
 	def make_text()
-		nil
+		@text = @base.to_s
 	end
 end
